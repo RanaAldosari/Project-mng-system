@@ -18,7 +18,11 @@ function ProjectDetails() {
       });
   }, [id]);
 function acceptproject(){
- Swal.fire('Project Accepted!');
+    Swal.fire({
+  title: "Successfully!",
+  text: "Project Accepted!",
+  icon: "success"
+});
 }
  function rejectproject() {
     Swal.fire({
@@ -52,7 +56,7 @@ function acceptproject(){
             <p>{item.description}</p>
 <div className='flex gap-3'>
                 <button className='bg-green-400' onClick={acceptproject}>Accept</button>
-            <button onClick={rejectproject} className='bg-red-500'>ignor</button>
+            <button onClick={rejectproject} className='bg-red-500'>Reject</button>
 </div>
           </div>
         ))
