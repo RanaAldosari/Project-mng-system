@@ -2,11 +2,12 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router';
 function ProjectDetails() {
   const { id } = useParams();
   const apiUrl = "https://68219a91259dad2655afc3cc.mockapi.io/api/users/image";
   const [details, setDetails] = useState([]);
-
+const navigate=useNavigate()
   useEffect(() => {
     axios.get(apiUrl)
       .then((res) => {
@@ -40,7 +41,9 @@ function acceptproject(){
       }
     });
   }
-
+function switchprojectHome(){
+    navigate("/tech-home")
+}
 
   return (
     <>
@@ -62,6 +65,9 @@ function acceptproject(){
         ))
       )}
     </div>
+
+<button onClick={switchprojectHome}>Back</button>
+
       </div>
     </>
   );
