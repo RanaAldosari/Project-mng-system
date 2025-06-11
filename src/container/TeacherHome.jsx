@@ -19,18 +19,20 @@ setUser(res.data)
   })
 })
 
-function switchDetails(){
-  navigate("/project-details")
+function switchDetails(id) {
+  navigate(`/project-details/${id}`);
 }
+
   return (
 <>
 <div>
-  {user.map((item)=>(
-    <div key={item.id}>
-<input type="text" value={item.username} />
-<button className='bg-blue-600 m-2' onClick={switchDetails}>Display</button>
-    </div>
-  ))}
+{user.map((item) => (
+  <div key={item.id}>
+    <input type="text" value={item.username} readOnly />
+    <button className='bg-blue-600 m-2' onClick={() => switchDetails(item.id)}>Display</button>
+  </div>
+))}
+
   <div>
 
   </div>
