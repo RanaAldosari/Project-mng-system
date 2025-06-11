@@ -8,6 +8,8 @@ import Login from '../pages/Login';
 import UserHome from '../container/UserHome';
 import AddProject from '../container/AddProject';
 import UserProfile from '../container/UserProfile';
+import ProjectDetails from '../container/ProjectDetails';
+import TeacherHome from '../container/TeacherHome';
 function Layout(){
     return(
         <>
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path:"/edit-profile",
         element:<UserProfile></UserProfile>
+      },
+      {
+        path:"/project-details",
+        element:<ProjectDetails></ProjectDetails>
+      },
+      {
+        path:"/tech-home",
+        element:<TeacherHome></TeacherHome>
       }
     ]
   },

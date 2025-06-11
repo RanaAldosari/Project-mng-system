@@ -37,6 +37,10 @@ navigate('/home')
   text: "There is an error,try again",
 });
 })
+
+if(email==="teacher-id-23451@tuwaiq.com"&&password==="23451")
+alert("login as teacher")
+navigate("/tech-home")
 }
 
   return (
