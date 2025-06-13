@@ -1,31 +1,10 @@
 import React from 'react'
-import { useNavigate } from 'react-router'
-import { FaCircleUser } from "react-icons/fa6";
-function UserHome() {
-    const user=localStorage.getItem("username_key")
-    const navigate=useNavigate()
-function addProject(){
-navigate('/Idea')
-}
 
-function userProfile(){
-    navigate("/edit-profile")
-}
+function ViewProjects() {
   return (
- <>
- <div>
-
-  <div className="flex justify-between mb-4">
-    <h2 className='text-purple-600 font-bold flex items-center gap-2' onClick={userProfile}><FaCircleUser></FaCircleUser> {user} </h2>      
-<button className="bg-purple-200 text-white px-4 py-2 rounded hover:bg-purple-500 cursor-pointer transition" onClick={addProject}>
-Add Project
-</button>
-        </div>
-    <div>
- </div>
-
-
-{/* projects */}
+<>
+<div>
+    {/* projects */}
 <div className=" min-h-screen p-6">
    <div className="mb-6">
     <h1 className="text-3xl font-bold text-purple-600">All Projects:</h1>
@@ -63,8 +42,8 @@ Add Project
 
  </div>
 </div>
- </>
+</>
   )
 }
 
-export default UserHome
+export default ViewProjects

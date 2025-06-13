@@ -55,27 +55,94 @@ navigate("/login")
 });
 })
 }
-
+function switchLogin(){
+    navigate("/login")
+}
 return (
 <>
-<div>
-    <h2>Create Your Account!</h2>
-    {/* form */}
-    <div>
-    <label>Username:</label>
-    <input className='border' type="text" value={username} onChange={(e)=>{setUsername(e.target.value)}}/>
+<div className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 py-8">
 
-        <label>Email:</label>
-    <input className='border' type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+  <div className="w-full lg:w-1/2 flex flex-col items-center text-center mb-10 lg:mb-0">
+    <h2 className="text-black/70 text-[1.5rem] md:text-4xl lg:text-4xl font-bold mb-6 leading-snug">
+      Welcome to <br />
+      <span className="text-black/70">Project Management System</span>
+    </h2>
+<img
+      className="w-60 md:w-80 lg:w-80 mt-4"
+      src="/Forms_Customizable_Isometric_Illustrations___Amico_Style-removebg-preview.png"
+      alt="logo-signup"
+    />
+  </div>
 
-        <label>Password:</label>
-    <input className='border' type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
+  <div className="w-full lg:w-1/2 flex justify-center">
+    <div className="w-full max-w-md p-8 rounded bg-white ">
+      <h2 className="text-2xl font-bold mb-6 text-center text-black/70">
+        Create Your Account!
+      </h2>
 
-        <label>Confirm password:</label>
-    <input className='border' type="password" value={confirmPassword} onChange={(e)=>{setConfirmPassword(e.target.value)}}/>
-    <button onClick={handelSignup}>Create</button>
+      <div className="space-y-4">
+        <div>
+          <label className="block mb-1 font-medium text-gray-700">Username:</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-1 font-medium text-gray-700">Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-1 font-medium text-gray-700">Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-1 font-medium text-gray-700">Confirm Password:</label>
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+          />
+        </div>
+
+        <button
+          onClick={handelSignup}
+          className="w-full bg-purple-900 hover:bg-purple-800 text-white py-2 rounded font-semibold transition duration-200"
+        >
+          Create Account
+        </button>
+
+        <p className="text-sm text-gray-600 text-center mt-4">
+          Already have an account?{" "}
+          <span
+            className="text-purple-900 font-medium hover:underline cursor-pointer"
+            onClick={switchLogin}
+          >
+            Login
+          </span>
+        </p>
+      </div>
     </div>
+  </div>
 </div>
+
+
 </>
   )
 }
