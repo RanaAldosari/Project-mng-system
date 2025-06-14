@@ -29,6 +29,7 @@ Swal.fire({
 });
 localStorage.setItem("username_key",findUser.username)
 navigate('/home')
+return
     }
 }).catch((err)=>{
     console.log(err)
@@ -41,6 +42,7 @@ navigate('/home')
 if(email==="teacher-id-23451@tuwaiq.com"&&password==="23451")
 alert("login as teacher")
 navigate("/tech-home")
+return
 }
 // admin
 if(email==="admin-id-234512@tuwaiq.com"&&password==="234512"){

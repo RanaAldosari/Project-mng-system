@@ -3,19 +3,20 @@ import { CiUser } from "react-icons/ci";
 
 function TearcherDashboard() {
   return (
+    <>
     <div className=" rounded-lg p-4 sm:p-6 w-full max-w-7xl mx-auto space-y-10">
 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-<div className="bg-purple-700 text-white rounded-lg p-4 flex flex-col items-center justify-center shadow-md hover:cursor-pointer duration-300  delay-300 hover:scale-105">
+<div className="bg-purple-400 text-white rounded-lg p-4 flex flex-col items-center justify-center shadow-md hover:cursor-pointer duration-300  delay-300 hover:scale-105">
 <div className="flex items-center gap-2 text-3xl font-bold"> <CiUser size={30} /> 100 </div>
           <p className="mt-2 text-[1.1rem] text-center">Number of Students</p>
         </div>
 {/* pie-chart */}
-        <div className="bg-white rounded-lg p-4 shadow-md text-center hover:cursor-pointer duration-300  delay-300 hover:scale-105">
+        <div className="bg-white rounded-lg p-4 shadow-md text-center hover:cursor-pointer duration-300 delay-300 hover:scale-105">
           <h2 className="text-xl font-bold mb-1">Number of Students</h2>
           <p className="text-sm text-gray-500 mb-3">Pie Chart</p>
           <div className="flex justify-center items-center">
             <div className="relative w-28 sm:w-36 h-28 sm:h-36">
-              <div className="w-full h-full rounded-full border-[12px] sm:border-[14px] border-purple-700 rotate-[45deg]"></div>
+              <div className="w-full h-full rounded-full border-[12px] sm:border-[14px] border-purple-300 rotate-[45deg]"></div>
               <div className="absolute inset-4 bg-white rounded-full flex flex-col justify-center items-center text-center">
                 <p className="text-xl font-bold">100</p>
                 <p className="text-sm text-gray-500">Students</p>
@@ -23,7 +24,7 @@ function TearcherDashboard() {
             </div>
           </div>
           <div className="mt-4 flex justify-center gap-2 text-sm text-gray-700">
-            <span className="w-3 h-3 bg-purple-700 rounded-full"></span> Students: 100
+            <span className="w-3 h-3 bg-purple-300 rounded-full"></span> Students: 100
           </div>
         </div>
 {/* pie-chart */}
@@ -32,7 +33,7 @@ function TearcherDashboard() {
           <p className="text-sm text-gray-500 mb-3">Pie Chart</p>
           <div className="flex justify-center items-center">
             <div className="relative w-28 sm:w-36 h-28 sm:h-36">
-              <div className="w-full h-full rounded-full border-[12px] sm:border-[14px] border-purple-700 border-r-purple-500 rotate-[45deg]"></div>
+              <div className="w-full h-full rounded-full border-[12px] sm:border-[14px] border-purple-300 border-r-purple-200 rotate-[45deg]"></div>
               <div className="absolute inset-4 bg-white rounded-full flex flex-col justify-center items-center text-center">
                 <p className="text-xl font-bold">100</p>
                 <p className="text-sm text-gray-500">Projects</p>
@@ -41,10 +42,10 @@ function TearcherDashboard() {
           </div>
           <div className="mt-4 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-sm text-gray-700">
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 bg-purple-700 rounded-full"></span> Accepted: 65
+              <span className="w-3 h-3 bg-purple-300 rounded-full"></span> Accepted: 65
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 bg-purple-500 rounded-full"></span> Rejected: 35
+              <span className="w-3 h-3 bg-purple-200 rounded-full"></span> Rejected: 35
             </div>
           </div>
         </div>
@@ -95,6 +96,7 @@ function TearcherDashboard() {
         </div>
       </div>
     </div>
+ </>
   );
 }
 

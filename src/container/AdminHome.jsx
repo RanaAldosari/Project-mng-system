@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 import { LuArrowUpRight } from "react-icons/lu";
 import axios from 'axios';
 import {
@@ -14,7 +14,7 @@ const COLORS = ['#c084fc', '#a855f7', '#d8b4fe'];
 function AdminHome() {
   const apiUrl = "https://68219a91259dad2655afc3cc.mockapi.io/api/users/user";
   const [students, setStudents] = useState([]);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     axios.get(apiUrl)
@@ -46,8 +46,9 @@ function AdminHome() {
   ];
 
   return (
-    <div className="p-4 sm:p-6 max-w-7xl mx-auto">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-purple-900">Admin Dashboard</h1>
+<>
+ <div className="p-4 sm:p-6 max-w-7xl mx-auto">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-start text-purple-400">Admin Dashboard</h1>
 {/* cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
         {[
@@ -167,6 +168,7 @@ function AdminHome() {
         </ResponsiveContainer>
       </div>
     </div>
+    </>
   );
 }
 

@@ -68,9 +68,8 @@ await Swal.fire({
       alt="form illustration"
     />
   </div>
-
-
-  <form onSubmit={handleSubmit} className="md:w-1/2 bg-white rounded-lg p-6 space-y-4">
+{/* form for add new project */}
+ <form onSubmit={handleSubmit} className="md:w-1/2 bg-white rounded-lg p-6 space-y-4">
     <h1 className="text-xl font-semibold text-purple-700 mb-4">Add Your Project</h1>
 
     <div>
@@ -85,7 +84,7 @@ await Swal.fire({
       />
     </div>
 
-    <div>
+ <div>
       <label className="block font-medium">Project Type:</label>
       <select
         value={formData.type}
@@ -113,8 +112,7 @@ await Swal.fire({
         required
       />
     </div>
-
-    <div>
+ <div>
       <h2 className="text-lg font-semibold text-gray-700 mt-6">Team Information:</h2>
     </div>
 

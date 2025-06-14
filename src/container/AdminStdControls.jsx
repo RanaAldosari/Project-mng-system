@@ -8,9 +8,9 @@ function AdminStdControls() {
   useEffect(() => {
     axios.get('https://68219a91259dad2655afc3cc.mockapi.io/api/users/user')
       .then(response => setStudents(response.data))
-      .catch(error => console.error('Error fetching students:', error));
+      .catch(error => console.error(error));
   }, []);
-
+// delete student
   const handleDelete = (id) => {
     axios.delete(`https://68219a91259dad2655afc3cc.mockapi.io/api/users/user/${id}`)
       .then(() => {
@@ -18,7 +18,7 @@ function AdminStdControls() {
       })
       .catch(error => console.error('Error deleting student:', error));
   };
-
+// add new stdudent
   const handleAdd = () => {
     axios.post('https://68219a91259dad2655afc3cc.mockapi.io/api/users/user', newStudent)
       .then(response => {
@@ -29,7 +29,8 @@ function AdminStdControls() {
   };
 
   return (
-    <div>
+    <>
+ <div>
       <h1>Student Management</h1>
       <div>
         <input
@@ -55,6 +56,7 @@ function AdminStdControls() {
         ))}
       </ul>
     </div>
+</>
   );
 }
 

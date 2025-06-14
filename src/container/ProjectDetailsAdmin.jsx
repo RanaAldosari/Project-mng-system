@@ -10,11 +10,16 @@ import { useNavigate } from 'react-router';
 
 function ProjectDetailsAdmin() {
   const navigate=useNavigate()
-  const { id } = useParams();
+  // const { id } = useParams();
   const [student, setStudent] = useState(null);
   const [editDes, setEditDes] = useState(false);
   const [editedDescription, setEditedDescription] = useState('');
-  const apiUrl = `https://68219a91259dad2655afc3cc.mockapi.io/api/users/user/${id}`;
+  // const apiUrl = `https://68219a91259dad2655afc3cc.mockapi.io/api/users/user/${id}`;
+
+
+const { id } = useParams();
+const apiUrl = `https://68219a91259dad2655afc3cc.mockapi.io/api/users/image/${id}`;
+
 
   useEffect(() => {
     axios.get(apiUrl)
@@ -42,9 +47,9 @@ function ProjectDetailsAdmin() {
     }
   };
 
-  function switchSearchPage(){
-    navigate("/search-std-1d")
-  }
+  // function switchSearchPage(){
+  //   navigate("/search-std-1d")
+  // }
 
   const handleSaveDescription = () => {
     axios.put(apiUrl, { description: editedDescription }).then(() => {
@@ -63,7 +68,7 @@ function ProjectDetailsAdmin() {
       <h2 className="text-2xl font-bold mb-4">Project Details</h2>
 
       <div className="space-y-4 text-gray-700">
-        <p><strong>Student Name:</strong> {student.username}</p>
+        <p><strong>Student Name:</strong> {student.userId}</p>
         <p><strong>Project Title:</strong> {student.title}</p>
 
         <div>

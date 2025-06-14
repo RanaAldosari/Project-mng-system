@@ -23,11 +23,11 @@ function TeacherHome() {
   const filteredUsers = users.filter(user =>
     user.username.toLowerCase().includes(search.toLowerCase())
   );
-
+  
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-[.8rem] lg:text-2xl font-bold text-purple-700">Students Names:</h2>
+        <h2 className="text-[.8rem] lg:text-2xl font-bold text-purple-600">Students Names:</h2>
         <div className="relative w-full max-w-md">
           <input
             type="text"
@@ -47,11 +47,11 @@ function TeacherHome() {
             className="bg-white flex justify-between items-center p-4 rounded-lg shadow hover:shadow-md delay-300 duration-500"
           >
             <div>
-              <p className="font-semibold text-gray-800 text-[.8rem] lg:text-[1rem]">Student Name: {user.username}</p>
+              <p className="font-semibold text-black/80 text-[.8rem] lg:text-[1rem]">Username: {user.username}</p>
               <p className="text-sm text-gray-500 text-[.6rem] lg:text-[.8rem]">project Title: {user.title || 'No title'}</p>
             </div>
             <button
-              className="flex items-center gap-2 bg-purple-600 text-white px-4 py-1.5 rounded-md hover:bg-purple-500 cursor-pointer duration-500 delay-200"
+              className="flex items-center gap-2 bg-purple-100 text-purple-600  px-4 py-1.5 rounded-md hover:bg-purple-200 cursor-pointer duration-500 delay-200"
               onClick={() => switchDetails(user.id)}
             >
               View <LuArrowUpRight size={18} />
